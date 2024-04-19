@@ -8,3 +8,4 @@ TODO:
 - Add the ability to read a CSV file of points
 - Read an uploaded CSV file
 - Add other map layers, especially the high res satellite map (going to see if I can add the coordinate grid to that as well)
+- Add the ability to define a bounding box to only show points in that box
