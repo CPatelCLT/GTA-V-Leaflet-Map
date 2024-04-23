@@ -48,8 +48,18 @@
 			maxZoom: 1
 		});
 
-		const bounds = [[-4000, -4000], [8000, 6000]];
-		const image = L.imageOverlay('gtavgrid.jpeg', bounds).addTo(map);
+		const bounds = [[-4041, -5690], [8371, 6721]];
+		const grid = L.imageOverlay('grid.png', bounds);
+		const satellite = L.imageOverlay('satellite.png', bounds);
+		const atlas = L.imageOverlay('atlas.png', bounds);
+
+		var baseMaps = {
+			"Grid": grid,
+			"Atlas": atlas,
+			"Satellite": satellite
+		};
+
+		L.control.layers(baseMaps).addTo(map);
 
 		map.fitBounds(bounds);
 		map.setView([0, 0], -2);
